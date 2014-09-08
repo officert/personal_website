@@ -1,0 +1,90 @@
+@import "../bower_components/bootstrap/less/bootstrap.less";
+@import "../bower_components/font-awesome/less/font-awesome.less";
+
+@icon-text-margin: 12px; //use when an icon is sitting next to some text to put margin between the icon and the text
+
+@view-animation-speed:3;
+/* ------------------- Font Awesome ------------------- */
+
+@fa-font-path: "../bower_components/font-awesome/fonts";
+@icon-size-base:          18px;
+@icon-size-small:         ceil((@icon-size-base * 0.85)); // ~15.3px
+@icon-size-large:         ceil((@icon-size-base * 1.25)); // ~22.5px
+@icon-size-xlarge:         ceil((@icon-size-base * 2.00)); // ~36px
+
+/* ------------------- Bootstrap ---------------------- */
+
+@grid-gutter-width : 10px;
+
+//Container
+@container-large-desktop:      ((990px + @grid-gutter-width));
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+@gray-base: #000;
+@gray-darker: lighten(@gray-base, 13.5%); // #222
+@gray-dark: lighten(@gray-base, 20%); // #333
+@gray: lighten(@gray-base, 33.5%); // #555
+@gray-light: #D0D2D3; // #999
+@gray-lighter: lighten(@gray-base, 93.5%); // #eee
+
+//@brand-primary: #42657B; //dark blue
+
+@brand-success: #5992c2;
+@brand-info: #78BBEC;
+@brand-warning: #E7A665;
+@brand-danger: #EA5D60;
+
+@border-radius-base: 4px;
+@border-radius-large:8px;
+
+//== Scaffolding
+//
+// ## Settings for some of the most global styles.
+
+// Background color for <body>
+@body-bg: #F0F0F0;
+
+// Inverted navbar
+@navbar-inverse-color: white;
+@navbar-inverse-bg: black;
+@navbar-inverse-border: darken(@navbar-inverse-bg, 10%);
+
+// Inverted navbar links
+@navbar-inverse-link-color: white;
+@navbar-inverse-link-hover-color: #fff;
+@navbar-inverse-link-hover-bg: transparent;
+@navbar-inverse-link-active-color: @navbar-inverse-link-hover-color;
+@navbar-inverse-link-active-bg: darken(@navbar-inverse-bg, 10%);
+@navbar-inverse-link-disabled-color: #444;
+@navbar-inverse-link-disabled-bg: transparent;
+
+//== Buttons
+//
+@btn-primary-color:white;
+//## For each of Bootstrap's buttons, define text, background and border color.
+// @btn-secondary-color: #fff;
+// @btn-secondary-bg: @brand-secondary;
+// @btn-secondary-border: darken(@btn-secondary-bg, 5%);
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+@font-family-serif : 'Lora', serif;
+@font-family-sans-serif : 'Lato',sans-serif;
+
+@font-size-base:16px;
+
+@text-color:            @gray;
+
+//== Navbar
+//
+//##
+
+// Basics of a navbar
+@navbar-height:60px;
+
+//Panels
+@panel-default-heading-bg: #fff;

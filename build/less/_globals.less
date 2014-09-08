@@ -1,0 +1,296 @@
+@import "../bower_components/bootstrap/less/bootstrap.less";
+@import "../bower_components/font-awesome/less/font-awesome.less";
+@import "_variables.less";
+
+/* --------------------------- Globals -------------------------------- */
+ body {
+    overflow-x: hidden;
+    background:url('../images/fuzzy.gif') repeat;
+}
+ul, ol {
+    list-style: none;
+}
+
+/* Base Classes */
+.base-app-page {
+    .clearfix;
+    margin-bottom: 50px;
+}
+
+.block {
+  .clearfix;
+  background:white;
+  border-radius:@border-radius-base;
+  border:1px solid #fff;
+  padding:5px;
+  margin-bottom: @grid-gutter-width;
+
+  .block-header {
+    font-weight:bold;
+    margin-bottom: 0px;
+    border-bottom: 1px solid @gray-lighter;
+    position: relative;
+    padding: @block-padding;
+
+    .block-header-icon {
+      margin-right: 10px;
+    }
+    .block-header-icons {
+      position: absolute;
+      top:-5px;
+      right:-6px;
+      border-left:1px solid @gray-lighter;
+      border-bottom:1px solid @gray-lighter;
+      border-top-right-radius: @border-radius-base;
+      .clearfix;
+      > a {
+        float:left;
+        border-right:1px solid @gray-lighter;
+        padding:12px 14px 13px 14px ;
+        &:last-child {
+          border-right:0;
+        }
+      }
+    }
+  }
+  
+  .block-body  {
+    margin-top: 20px;
+    padding: @block-padding;
+  }
+}
+
+.block-height-1x {
+  height: @block-height;
+}
+.block-height-2x {
+  height: (@block-height * 2) + @grid-gutter-width;
+}
+
+.wizard-header {
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid @gray-light;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+/* Utils */
+.font-serif {
+  font-family: @font-family-serif;
+}
+.font-sans-serif {
+  font-family: @font-family-sans-serif;
+}
+ .centered {
+    text-align: center;
+}
+.remove-left-padding {
+    padding-left:0;
+}
+.remove-right-padding {
+    padding-right:0;
+}
+.remove-padding {
+    padding:0;
+}
+.border-dark {
+    border:1px solid @panel-default-border;
+}
+
+/* Buttons */
+.btn-primary {
+    .font-sans-serif;
+}
+/* Icons */
+ i {
+    font-size: @icon-size-base;
+}
+/* Forms */
+ .form-group {
+    .validation-error-message {
+        /* unobtrusive validation */
+        list-style-position: none;
+        margin-top: 5px;
+        display: block;
+        &.field-validation-error {
+            color: @brand-danger;
+        }
+    }
+    &.has-error {
+        .form-control {
+            background: lighten(@brand-danger, 30%);
+            .transition(background ease-in-out .25s);
+        }
+    }
+    > .input-group {
+        > .input-group-addon {
+            width: 40px;
+        }
+    }
+}
+/* Icons */
+ .icon-left-margin {
+    /* use when an icon is sitting on the left of some text to give some right margin between the icon and the text */
+    margin-right: @icon-text-margin;
+}
+.icon-right-margin {
+    /* use when an icon is sitting on the left of some text to give some left margin between the icon and the text */
+    margin-left: @icon-text-margin;
+}
+.icon-primary {
+    color: @brand-primary;
+}
+.icon-success {
+    color: @brand-success;
+}
+.icon-info {
+    color: @brand-info;
+}
+.icon-warning {
+    color: @brand-warning;
+}
+.icon-danger {
+    color: @brand-danger;
+}
+/* Panels */
+ .panel {
+    border:10px solid #fff;
+    .panel-heading {
+        padding: 6px 15px;
+        > i {
+            margin-right: @icon-text-margin;
+        }
+        > h1, h2, h3, h4, h5 {
+            margin-top: 5px;
+        }
+        > .btn-group {
+            margin-top: -7px;
+            margin-right: -16px;
+            margin-bottom: -6px;
+            &.pull-right {
+                > .btn {
+                    border-radius: 0;
+                    &:last-child {
+                        border-top-right-radius: @border-radius-base;
+                    }
+                }
+            }
+        }
+    }
+    .panel-body {
+        > .table {
+            margin-bottom: 0;
+        }
+        > .form-horizontal {
+            > .form-group {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+        .input-group {
+            width:100%;
+        }
+    }
+}
+.panel-shadow {
+    box-shadow: 0 0 7px 0 @gray-light;
+}
+/* Validation Summary */
+ .validation-summary {
+    > i {
+        float: left;
+    }
+    > div {
+        > ul {
+            margin-bottom: 0;
+            margin-top: -4px;
+        }
+    }
+}
+/* Inline Edit */
+ .edit-inline {
+    .transition(border-color 0.1s ease-out 0s);
+    > .form-control-feedback {
+        display: none;
+    }
+    &.has-success {
+        > .form-control-feedback {
+            display: inline;
+        }
+    }
+}
+/* Container */
+ .container-no-padding {
+    padding-left:0;
+    padding-right: 0;
+}
+/* Modals */
+ .modal {
+    .modal-dialog {
+        .modal-content {
+            padding:20px;
+            .modal-header {
+                padding-top: 0;
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .modal-body {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .modal-footer {
+                padding-bottom: 0;
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .close {
+                position: absolute;
+                ;
+                top:20px;
+                right: 20px;
+            }
+        }
+    }
+}
+/* Navbar */
+ .navbar-brand {
+    font-family: @font-family-sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+.navbar {
+    li {
+        > a {
+            &.active {
+                background:lighten(@brand-primary, 10%);
+                color:#fff;
+            }
+        }
+    }
+}
+/* Toastr Messages */
+//  #toast-container {
+//     width:100%;
+//     right:0;
+//     top:35%;
+//     > div {
+//         width:100%;
+//     }
+//     .toast {
+//         &.toast-success {
+//         }
+//     }
+// }
+/* Page Header */
+.page-header {
+    margin:10px 0;
+}
+
+/* Carousel */
+.carousel-control.left {
+    background:none;
+}
+.carousel-control.right {
+    background:none;
+}
