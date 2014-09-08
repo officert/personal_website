@@ -17,6 +17,7 @@ var express = require('express');
 var http = require('http');
 var app = module.exports = express();
 var path = require('path');
+var newRelic = require('newrelic');
 
 // Global Variables
 global.Website = {};
