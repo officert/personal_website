@@ -5,17 +5,17 @@
  * ========================================================================= */
 var gulp = require('gulp');
 var watch = require('gulp-watch');
-var ENV = process.env.NODE_ENV || 'development';
+var NODE_ENV = process.env.NODE_ENV || process.argv[3] || 'development';
+var ENV = setupEnv(NODE_ENV);
 var appConfig = require(__dirname + '/config/appConfig')[ENV];
 var clean = require('gulp-clean');
 var less = require('gulp-less');
-var annotate = require('gulp-ng-annotate');
 var replace = require('gulp-replace');
 var uglify = require('gulp-uglifyjs');
 var htmlReplace = require('gulp-html-replace');
 var gulpIf = require('gulp-if');
 
-//ENV = 'production';
+console.log('\n running in ' + ENV + ' environment \n');
 
 /* =========================================================================
  *
@@ -85,7 +85,6 @@ gulp.task('css', function() {
  */
 gulp.task('js', function() {
   return gulp.src('src/js/**/*.js')
-    .pipe(annotate())
     .pipe(uglify(MINIFIEDSCRIPT, UGLIFYOPTIONS))
     .pipe(gulp.dest(BUILDDIR + '/js'));
 });
@@ -100,7 +99,12 @@ gulp.task('server', ['default'], function() {
       emit: 'one',
       emitOnGlob: false
     }, function(files) {
+      //copy the changes less files to the build dir
       files
+        .pipe(gulp.dest(BUILDDIR + '/less'));
+
+      //reprocess main.less in the build dir - regenerate css
+      return gulp.src(BUILDDIR + '/less/site.less')
         .pipe(less(LESSOPTIONS))
         .pipe(gulp.dest(BUILDDIR + '/css'));
     });
@@ -114,9 +118,7 @@ gulp.task('server', ['default'], function() {
       emit: 'one',
       emitOnGlob: false
     }, function(files) {
-      _replace(files)
-        .pipe(annotate())
-        .pipe(uglify(MINIFIEDSCRIPT, UGLIFYOPTIONS))
+      return _replace(files)
         .pipe(gulp.dest(BUILDDIR + '/js'));
     });
   }());
@@ -131,7 +133,7 @@ gulp.task('server', ['default'], function() {
         emit: 'one',
         emitOnGlob: false
       }, function(files) {
-        _replace(files)
+        return _replace(files)
           .pipe(gulp.dest(BUILDDIR + '/js'));
       });
 
@@ -155,9 +157,9 @@ function _init(stream) {
 function _replace(stream) {
   _init(stream);
   for (key in appConfig) {
-    stream.pipe(gulpIf(_isJsFile, replace('@@' + key, appConfig[key], {
+    stream.pipe(replace('@@' + key, appConfig[key], {
       skipBinary: true
-    })));
+    }));
   }
 
   _htmlReplace(stream);
@@ -187,3 +189,17 @@ function _isHtmlFile(file) {
 function _endsWith(s, suffix) {
   return s.indexOf(suffix, s.length - suffix.length) !== -1;
 };
+
+function setupEnv(env) {
+  // allow passing name as an argument
+  if (env && env.indexOf('-') === 0) env = env.substring(1);
+
+  // production
+  if (env === 'master' || env === 'prod' || env === 'production') return 'production';
+  // development
+  else if (env === 'dev' || env === 'development') return 'development';
+  // local
+  else if (env === 'local') return 'local';
+  // default
+  else return 'development';
+}

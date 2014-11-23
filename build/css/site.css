@@ -7905,3 +7905,6 @@ h2 {
   color: #233747;
   padding: 10px 18px;
 }
+#home #links > .links-wrapper > ul li > a:hover {
+  color: #345169;
+}
