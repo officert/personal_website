@@ -8,6 +8,7 @@ lib-cov
 *.gz
 
 build
+src/bower_components
 
 *.DS_Store
 
