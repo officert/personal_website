@@ -1,9 +1,5 @@
 node_modules
 .DS_Store
-*build/.css
-*.log
-*.codekit
-*.sublime-*
 build
-src/bower_components
+bower_components
 *.idea
