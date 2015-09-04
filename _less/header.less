@@ -1,0 +1,34 @@
+.header {
+  border-top: 5px solid @gray-dark;
+  border-bottom: 1px solid @gray-dark;
+  min-height: 56px;
+
+  // Positioning context for the mobile navigation icon
+  position: relative;
+  .site-title {
+    font-size: 26px;
+    line-height: 56px;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+    float: left;
+    &,
+    &:visited {
+      color: @gray-dark;
+    }
+  }
+  .site-nav {
+    float: right;
+    line-height: 56px;
+    .menu-icon {
+      display: none;
+    }
+    .page-link {
+      color: @text-color;
+
+      // Gaps between nav items, but not on the first one
+      &:not(:first-child) {
+        margin-left: 20px;
+      }
+    }
+  }
+}
