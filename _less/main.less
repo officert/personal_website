@@ -1,11 +1,14 @@
 @import '../bower_components/bootstrap/less/bootstrap.less';
 @import 'header.less';
 @import 'footer.less';
+@import 'home.less';
 @import 'components.less';
 @import 'syntax-highlighting.less';
-
 body {
   font-family: "Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+}
+.site-content {
+  margin-bottom: 50px;
 }
 
 /**
@@ -28,7 +31,8 @@ figure > img {
  */
 ul,
 ol {
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /**
@@ -67,10 +71,10 @@ blockquote {
  */
 pre,
 code {
-  font-size: 15px;
-  border: 1px solid @gray-light;
-  border-radius: 3px;
-  background-color: #eef;
+  // font-size: 15px;
+  // border: 1px solid @gray-light;
+  // border-radius: 3px;
+  // background-color: #eef;
 }
 code {
   padding: 1px 5px;
