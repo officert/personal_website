@@ -6794,7 +6794,7 @@ button.close {
   margin-left: 20px;
 }
 .footer {
-  padding: 20px 0;
+  padding: 15px 0 30px 15px;
   background: #222222;
 }
 .footer .site-footer {
@@ -6813,8 +6813,10 @@ button.close {
 }
 .footer .footer-links ul li {
   float: left;
+  padding-right: 10px;
 }
 .footer .footer-links ul li a {
+  font-size: 20px;
   color: #777777;
 }
 .home {
