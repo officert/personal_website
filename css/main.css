@@ -6797,6 +6797,9 @@ button.close {
   padding: 15px 0 30px 15px;
   background: #222222;
 }
+.footer h2 {
+  border: none;
+}
 .footer .site-footer {
   border-top: 1px solid #777777;
   padding: 15px 0;
