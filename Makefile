@@ -11,6 +11,6 @@ css:
 
 ## RUN STEPS
 run: build
-	bundle exec jekyll serve
+	bundle exec jekyll serve --baseurl ''
 
 .PHONY: build css
