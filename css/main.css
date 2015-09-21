@@ -7073,6 +7073,7 @@ button.close {
 }
 body {
   font-family: "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  background: yellow;
 }
 .site-content {
   margin-bottom: 50px;

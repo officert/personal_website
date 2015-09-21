@@ -1,16 +1,9 @@
-default: run
+default: build
 
 install:
 	bundle install
 
 ## BUILD STEPS
-build: css
+build:
 
-css:
-	node_modules/.bin/lessc _less/main.less css/main.css
-
-## RUN STEPS
-run: build
-	bundle exec jekyll serve --baseurl ''
-
-.PHONY: build css
+.PHONY: build
