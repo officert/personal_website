@@ -8,20 +8,33 @@ body {
   font-family: "Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
 }
 .site-content {
-  max-width: 800px;
-  margin: 0 auto 50px;
-}
-.side-bar {
-  width: 400px;
-  padding: 0;
-  position: absolute;
-  top: 65px;
-  right: 0;
-  border-left: 1px solid @gray-lighter;
-  .nav {
-    margin: 0;
+  margin-bottom: 50px;
+  .content-container {
+    width: auto;
+    margin: 0 auto;
+    margin-right: 400px;
+    padding-top: 75px;
+    padding-bottom: 40px;
+    .content {
+      padding-right: 20px;
+      padding-left: 20px;
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 620px; //todo: move to breakpoint
+    }
+  }
+  .side-bar {
+    width: 400px;
     padding: 0;
-    list-style: none;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    border-left: 1px solid @gray-lighter;
+    .nav {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
   }
 }
 

@@ -5,10 +5,12 @@
 <body>
   {% include header.html %}
   <div class="site-content clearfix">
-    <div class="col-sm-7 col-xs-12">
-      {{ content }}
+    <div class="content-container">
+      <div class="content">
+        {{ content }}
+      </div>
     </div>
-    <div class="side-bar col-sm-4 hidden-xs">
+    <div class="side-bar">
       {% include sidebar.html %}
     </div>
   </div>
