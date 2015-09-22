@@ -2,22 +2,15 @@ var gulp = require('gulp');
 var less = require('gulp-less');
 var sh = require('shelljs');
 var watch = require('gulp-watch');
-var browserSync = require('browser-sync').create();
 
 var child_process = require('child_process');
 var spawn = require('child_process').spawn;
 
 gulp.task('run', [], function(next) {
-  child_process.exec('bundle exec jekyll serve --baseurl \'\'');
-  return next();
-
-  // var jekyll = spawn('bundle exec jekyll serve', ['--baseurl', ''], {
-  //   stdio: 'inherit'
-  // });
-  //
-  // jekyll.on('exit', function(code) {
-  //   return next(code === 0 ? null : 'ERROR: Jekyll process exited with code: ' + code);
-  // });
+  child_process.exec('bundle exec jekyll serve --baseurl \'\'', function() {
+    console.log('finished run');
+    return next(null);
+  });
 });
 
 gulp.task('css', [], function() {
@@ -36,11 +29,20 @@ gulp.task('watch', ['css'], function() {
     console.log('css updated...');
     return gulp.src('_less/main.less')
       .pipe(less())
-      .pipe(gulp.dest('css'))
-      .pipe(browserSync.reload({
-        stream: true
-      }));
+      .pipe(gulp.dest('css'));
   });
+  //
+  // console.log('watching html...');
+  //
+  // ['./*.html', './_includes/*.html', './_drafts/*.html', './_layouts/*.html', './_pages/*.html', './_posts/*.html'].forEach(function(path) {
+  //   watch(path, {
+  //     emit: 'one',
+  //     emitOnGlob: false
+  //   }, function(files) {
+  //     console.log('html updated...');
+  //     return child_process.exec('bundle exec jekyll serve --baseurl \'\' --no-watch');
+  //   });
+  // });
 });
 
 /**
