@@ -6855,6 +6855,7 @@ button.close {
 .post .post-title {
   letter-spacing: -0.01em;
   margin: 4px 0 8px -2px;
+  font-size: 4em;
 }
 .post .post-meta {
   margin-bottom: 35px;
@@ -7079,7 +7080,6 @@ body {
   width: auto;
   margin: 0 auto;
   margin-right: 400px;
-  padding-top: 75px;
   padding-bottom: 40px;
 }
 .site-content .content-container .content {
