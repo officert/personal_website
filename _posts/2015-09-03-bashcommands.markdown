@@ -16,3 +16,7 @@ find
 {% endhighlight %}
 
 search a folder hierarchy for filename(s) that meed a desired criteria. Name, size, file type,  	etc...
+
+{% highlight bash %}
+lsof -i:35729
+{% highlight bash %}
