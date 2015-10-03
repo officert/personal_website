@@ -8,7 +8,7 @@ var spawn = require('child_process').spawn;
 
 gulp.task('run', [], function(next) {
   child_process.exec('bundle exec jekyll serve --baseurl \'\'', function() {
-    console.log('finished run');
+    console.log('finished run, listening on port:4000');
     return next(null);
   });
 });
