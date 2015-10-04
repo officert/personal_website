@@ -7,10 +7,10 @@ var child_process = require('child_process');
 var spawn = require('child_process').spawn;
 
 gulp.task('run', [], function(next) {
-  child_process.exec('bundle exec jekyll serve --baseurl \'\'', function() {
-    console.log('finished run, listening on port:4000');
-    return next(null);
-  });
+  return child_process.spawn('bundle', ['exec', 'jekyll', 'serve'], {
+      stdio: 'inherit'
+    })
+    .on('close', next);
 });
 
 gulp.task('css', [], function() {
