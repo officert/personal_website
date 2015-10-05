@@ -1,7 +1,29 @@
-<a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+<a class="site-title" href="{{ site.baseurl }}/">
+  <span class="text">{{ site.title }}</span>
+  <span class="t">T</span>
+</a>
 <ul class="nav">
   <li>
     <a href="{{ site.baseurl }}/">Posts</a>
     <a href="{{ site.baseurl }}/reference.html">Reference</a>
+  </li>
+</ul>
+<ul class="footer-nav">
+  <li>
+    <a href="mailto:{{ site.email }}">
+      <i class="fa fa-envelope-o"></i>
+    </a>
+  </li>
+  <li>
+    <a href="https://github.com/{{ site.github_username }}">
+      <i class="fa fa-github">
+      </i>
+    </a>
+  </li>
+  <li>
+    <a href="https://twitter.com/{{ site.twitter_username }}">
+      <i class="fa fa-twitter">
+      </i>
+    </a>
   </li>
 </ul>

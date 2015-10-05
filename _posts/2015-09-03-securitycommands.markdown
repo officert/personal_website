@@ -5,7 +5,7 @@ date: 2015-1-4T21:26:58.000Z
 category: reference
 ---
 
-http://osxdaily.com/2015/07/24/find-wi-fi-network-router-password-command-line-mac/
+[http://osxdaily.com/2015/07/24/find-wi-fi-network-router-password-command-line-mac/]
 
 ###Find & Show Wi-Fi Network Passwords from the Command Line in OS X
 

@@ -7,7 +7,7 @@ category: reference
 
 > Airport is a command line wireless utility
 
-http://osxdaily.com/2007/01/18/airport-the-little-known-command-line-wireless-utility/
+[http://osxdaily.com/2007/01/18/airport-the-little-known-command-line-wireless-utility/]
 
 ###Create a symlink to the airport binary
 

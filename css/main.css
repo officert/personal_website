@@ -7032,18 +7032,42 @@ body {
   font-size: 26px;
   line-height: 56px;
   letter-spacing: -1px;
-  margin-bottom: 0;
+  margin: 15px auto;
+  display: block;
+  padding: 0 15px;
+  height: 50px;
+  width: 50px;
+  border: 6px solid #555555;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+  position: relative;
 }
 .site-content .side-bar .site-title:hover {
   text-decoration: none;
+  transform: scale(1.1);
 }
 .site-content .side-bar .site-title:visited {
   color: #333333;
+}
+.site-content .side-bar .site-title .text {
+  position: absolute;
+  top: -99999px;
+}
+.site-content .side-bar .site-title .t {
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  top: -7px;
+  color: #555555;
+  left: 50%;
+  margin-left: -7.9px;
 }
 .site-content .side-bar .nav {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+.site-content .side-bar .footer-nav li {
+  display: inline-block;
 }
 .site-content .content-container {
   width: auto;

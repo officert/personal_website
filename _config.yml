@@ -1,9 +1,9 @@
 # Site settings
-title: Coding Notes
+title: Tim Officer
 email: timothyofficer@gmail.com
-description: Coding notes
+description: Tim Officer's Personal Website
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://codingnotes.com" # the base hostname & protocol for your site
+url: "http://timofficer.com" # the base hostname & protocol for your site
 twitter_username: timothyOfficer
 github_username:  officert
 permalink: /:year/:month/:day/:title/
