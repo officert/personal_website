@@ -1,38 +1,53 @@
 @import '../bower_components/bootstrap/less/bootstrap.less';
-@import 'header.less';
-@import 'footer.less';
 @import 'home.less';
 @import 'components.less';
 @import 'syntax-highlighting.less';
+
+// --------------------------
+// Vars
+// --------------------------
+
+// --------------------------
 body {
   font-family: "Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
 }
 .site-content {
-  margin-bottom: 50px;
-  .content-container {
-    width: auto;
-    margin: 0 auto;
-    margin-right: 400px;
-    padding-bottom: 40px;
-    .content {
-      padding-right: 20px;
-      padding-left: 20px;
-      margin-right: auto;
-      margin-left: auto;
-      max-width: 620px; //todo: move to breakpoint
-    }
-  }
   .side-bar {
-    width: 400px;
+    height: 100%;
+    width: 300px;
     padding: 0;
-    position: absolute;
-    top: 65px;
-    right: 0;
+    position: fixed;
+    background: #adcfdb;
+    top: 0;
+    left: 0;
     border-left: 1px solid @gray-lighter;
+    .site-title {
+      font-size: 26px;
+      line-height: 56px;
+      letter-spacing: -1px;
+      margin-bottom: 0;
+      &:hover {
+        text-decoration: none;
+      }
+      &:visited {
+        color: @gray-dark;
+      }
+    }
     .nav {
       margin: 0;
       padding: 0;
       list-style: none;
+    }
+  }
+  .content-container {
+    width: auto;
+    margin: 0 auto;
+    margin-left: 300px;
+    padding-bottom: 40px;
+    .content {
+      padding: 20px 20px 40px 60px;
+      margin-right: auto;
+      max-width: 620px; //todo: move to breakpoint
     }
   }
 }

@@ -4,7 +4,17 @@ layout: default
 
 <div class="home">
   <ul class="post-list">
-    {% for post in site.posts %}
+    <div class="no-post">
+      <div class="alert alert-info">
+        No Posts yet!
+      </div>
+    </div>
+    <!-- {% if site.posts.size < 1 %}
+    <div class="no-post">
+      No Posts
+    </div>
+    {% endif %} -->
+    {% for post in site.posts %} {% if post.categories contains 'reference' %} {% endif %} {% else %}
     <li>
       <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
       <h1 class="post-title">

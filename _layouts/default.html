@@ -3,18 +3,16 @@
 {% include head.html %}
 
 <body>
-  {% include header.html %}
   <div class="site-content clearfix">
     <div class="content-container">
+      <div class="side-bar">
+        {% include sidebar.html %}
+      </div>
       <div class="content">
         {{ content }}
       </div>
     </div>
-    <div class="side-bar">
-      {% include sidebar.html %}
-    </div>
   </div>
-  {% include footer.html %}
 </body>
 
 </html>

@@ -6764,85 +6764,30 @@ button.close {
     display: none !important;
   }
 }
-.header {
-  height: 65px;
-}
-.header .site-title {
-  font-size: 26px;
-  line-height: 56px;
-  letter-spacing: -1px;
-  margin-bottom: 0;
-  float: left;
-}
-.header .site-title:hover {
-  text-decoration: none;
-}
-.header .site-title:visited {
-  color: #333333;
-}
-.header .site-nav {
-  float: right;
-  line-height: 56px;
-}
-.header .site-nav .menu-icon {
-  display: none;
-}
-.header .site-nav .page-link {
-  color: #333333;
-}
-.header .site-nav .page-link:not(:first-child) {
-  margin-left: 20px;
-}
-.footer {
-  padding: 15px 0 30px 15px;
-  background: #222222;
-}
-.footer h2 {
-  border: none;
-}
-.footer .site-footer {
-  border-top: 1px solid #777777;
-  padding: 15px 0;
-}
-.footer .footer-heading {
-  font-size: 18px;
-  margin-bottom: 7.5px;
-}
-.footer .footer-links {
-  text-align: center;
-}
-.footer .footer-links ul {
-  list-style: none;
-}
-.footer .footer-links ul li {
-  float: left;
-  padding-right: 10px;
-}
-.footer .footer-links ul li a {
-  font-size: 20px;
-  color: #777777;
-}
 .home {
   margin-bottom: 15px;
 }
-.home .post-list {
+/**
+* Post List
+**/
+.post-list {
   margin: 0;
   list-style: none;
 }
-.home .post-list > li {
+.post-list > li {
   margin-bottom: 15px;
 }
-.home .post-list .post-meta {
+.post-list .post-meta {
   font-size: 14px;
   color: #777777;
 }
-.home .post-list .post-title {
+.post-list .post-title {
   margin: 4px 0 8px;
 }
-.home .post-list .post-title a {
+.post-list .post-title a {
   color: #333333;
 }
-.home .post-list .post-link {
+.post-list .post-link {
   display: block;
   font-size: 24px;
 }
@@ -7073,34 +7018,43 @@ button.close {
 body {
   font-family: "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 }
-.site-content {
-  margin-bottom: 50px;
-}
-.site-content .content-container {
-  width: auto;
-  margin: 0 auto;
-  margin-right: 400px;
-  padding-bottom: 40px;
-}
-.site-content .content-container .content {
-  padding-right: 20px;
-  padding-left: 20px;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 620px;
-}
 .site-content .side-bar {
-  width: 400px;
+  height: 100%;
+  width: 300px;
   padding: 0;
-  position: absolute;
-  top: 65px;
-  right: 0;
+  position: fixed;
+  background: #adcfdb;
+  top: 0;
+  left: 0;
   border-left: 1px solid #eeeeee;
+}
+.site-content .side-bar .site-title {
+  font-size: 26px;
+  line-height: 56px;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+}
+.site-content .side-bar .site-title:hover {
+  text-decoration: none;
+}
+.site-content .side-bar .site-title:visited {
+  color: #333333;
 }
 .site-content .side-bar .nav {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+.site-content .content-container {
+  width: auto;
+  margin: 0 auto;
+  margin-left: 300px;
+  padding-bottom: 40px;
+}
+.site-content .content-container .content {
+  padding: 20px 20px 40px 60px;
+  margin-right: auto;
+  max-width: 620px;
 }
 /**
  * Images

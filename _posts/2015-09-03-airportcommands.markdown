@@ -2,6 +2,7 @@
 layout: post
 title: 'Airport Commands'
 date: 2015-1-4T21:26:58.000Z
+category: reference
 ---
 
 > Airport is a command line wireless utility

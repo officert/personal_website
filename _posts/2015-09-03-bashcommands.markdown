@@ -2,6 +2,7 @@
 layout: post
 title: 'Bash Commands'
 date: 2015-09-20T21:26:58.000Z
+category: reference
 ---
 
 | Command       | Description  |
