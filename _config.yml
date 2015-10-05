@@ -2,7 +2,7 @@
 title: Coding Notes
 email: timothyofficer@gmail.com
 description: Coding notes
-baseurl: "/" # the subpath of your site, e.g. /blog/
+baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://codingnotes.com" # the base hostname & protocol for your site
 twitter_username: timothyOfficer
 github_username:  officert
