@@ -1,19 +1,19 @@
 ---
 layout: post
-title: 'Networking'
-date: 2015-1-4T21:26:58.000Z
+title: Networking
+date: 2015-01-04T21:26:58.000Z
 category: reference
 ---
 
 ##List all networking hardware in OSX
 
-``` shell
+```shell
 networksetup -listallhardwareports
 ```
 
 Should give you something like:
 
-``` shell
+```shell
 Hardware Port: Wi-Fi
 Device: en0
 Ethernet Address: 6c:40:08:b7:a1:06
@@ -35,22 +35,20 @@ Device: bridge0
 Ethernet Address: 6e:40:08:7b:1c:00
 ```
 
-
 ##Wireless sniffing tools
 
 [https://supportforums.cisco.com/document/75221/wireless-sniffing-using-mac-os-x-106-and-above](https://supportforums.cisco.com/document/75221/wireless-sniffing-using-mac-os-x-106-and-above)
 
 ###Using airportd utility
 
-``` shell
+```shell
 airportd {interface name} sniff {channel}
 ```
 
 This will save results to a .cap file in your /tmp directory.
 
-
 ###Reading a package capture file (.cap) in OSX
 
-``` shell
+```shell
 tcpdump -r {yourfile.cap} | less
 ```
