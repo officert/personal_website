@@ -6,31 +6,39 @@ category: reference
 ---
 
 ##mongodump & mongorestore
+
 These are utilities that Mongo provides for creating a backup (mongodump) and restoring from a backup (mongorestore).
 
 Mongodump docs: [Go Here](http://docs.mongodb.org/manual/reference/program/mongodump/)
 
 Mongorestore docs: [Go Here](http://docs.mongodb.org/manual/reference/program/mongorestore/)
 
+
 ####Creating a backup with mongodump
+
 
 You will need to get the username and password for our databases. The host and port might not be correct bellow either because for both Prod and Dev we have replica databases. So you may need to try a different host and post that below.
 
+
 Prod database:
 ``` shell
-mongodump --host candidate.13.mongolayer.com --port 10202 --db tablelist-prod -u {username} -p {password}
+mongodump --host {host} --port {port} --db tablelist-prod -u {username} -p {password}
 ```
+
 
 Dev database:
 ``` shell
-mongodump --host candidate.13.mongolayer.com --port 10511 --db tablelist-dev -u {username} -p {password}
+mongodump --host {host} --port {port} --db tablelist-dev -u {username} -p {password}
 ```
+
 
 Running either of these will create a backup in ```~/dump```. You can change where the files are written using ```--out```.
 
 You can also specify just a single collection to backup using ```--collection```.
 
+
 ####Restoring from a backup with mongorestore
+
 
 ``` shell
 mongorestore --db {databasename} ~/dump/tablelist-dev
