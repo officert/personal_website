@@ -3,22 +3,23 @@ layout: post
 title: ifconfig
 date: 2015-01-04T21:26:58.000Z
 category: reference
+author: 'Tim Officer'
 ---
 
 ifconfig is a system administration utility in linux
 
-###Turning interfaces up or down
+####Turning interfaces up or down
 
-```shell
+```
 ifconfig <interface> up
 ```
 
-```shell
+```
 ifconfig <interface> down
 ```
 
-###Changing the interfaces mode
+####Changing the interfaces mode
 
-```shell
+```
 ifconfig <interface> mode Monitor
 ```

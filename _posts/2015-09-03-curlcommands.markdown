@@ -3,9 +3,18 @@ layout: post
 title: 'cURL Commands'
 date: 2015-09-20T21:26:58.000Z
 category: reference
+author: 'Tim Officer'
 ---
 
-| Command       | Description  |
-| ------------- | -------------|
-| curl http://url.com | GET request |
-| curl -d "key=value" http://url.com | POST request with key/value pairs in the body |
+####GET requests
+
+```
+curl http://url.com
+```
+<br>
+
+####POST requests
+
+```
+curl -d "key=value" http://url.com
+```
