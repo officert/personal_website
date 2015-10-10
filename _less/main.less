@@ -1,5 +1,6 @@
 @import '../bower_components/bootstrap/less/bootstrap.less';
 @import 'home.less';
+@import 'sidebar.less';
 @import 'components.less';
 @import 'syntax-highlighting.less';
 
@@ -9,80 +10,20 @@
 @gray: #eee;
 @blue: #4078c0;
 @font-size-base: 16px;
+@sidebar-width: 300px;
 
 // --------------------------
 body {
   font-family: "Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
 }
-.site-content {.side-bar {
-    height: 100%;
-    width: 300px;
-    padding: 0;
-    position: fixed;
-    background: #adcfdb;
-    top: 0;
-    left: 0;
-    border-left: 1px solid @gray-lighter;
-    .site-title {
-      font-size: 26px;
-      line-height: 56px;
-      letter-spacing: -1px;
-      margin: 15px auto;
-      display: block;
-      padding: 0 15px;
-      height: 50px;
-      width: 50px;
-      border: 6px solid @gray;
-      border-radius: 50%;
-      transition: all 0.2s ease-in-out;
-      position: relative;
-      &:hover {
-        text-decoration: none;
-        transform: scale(1.1);
-
-        // .t {
-        //   top: -5px;
-        //   transform: scale(1.9);
-        // }
-      }
-      &:visited {
-        color: @gray-dark;
-      }
-      .text {
-        position: absolute;
-        top: -99999px;
-      }
-      .t {
-        transition: all 0.2s ease-in-out;
-        position: absolute;
-        top: -7px;
-        color: @gray;
-
-        // transform: rotate(0.15turn);
-        left: 50%;
-        margin-left: -7.9px;
-      }
-    }
-    .nav {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-    .footer-nav {li {
-        display: inline-block;
-      }
-    }
-  }
-  .content-container {
-    width: auto;
-    margin: 0 auto;
-    margin-left: 300px;
-    padding-bottom: 40px;
-    .content {
-      padding: 40px 20px 40px 40px;
-      margin-right: auto;
-      max-width: 800px; //todo: move to breakpoint
-    }
+.wrapper {
+  width: auto;
+  margin: 0 auto;
+  margin-left: @sidebar-width;
+  .content {
+    padding: 40px 20px 40px 40px;
+    margin-right: auto;
+    max-width: 800px; //todo: move to breakpoint
   }
 }
 

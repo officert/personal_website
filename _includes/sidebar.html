@@ -1,29 +1,44 @@
-<a class="site-title" href="{{ site.baseurl }}/">
-  <span class="text">{{ site.title }}</span>
-  <span class="t">T</span>
-</a>
-<ul class="nav">
-  <li>
-    <a href="{{ site.baseurl }}/">Posts</a>
-    <a href="{{ site.baseurl }}/reference.html">Reference</a>
-  </li>
-</ul>
-<ul class="footer-nav">
-  <li>
-    <a href="mailto:{{ site.email }}">
-      <i class="fa fa-envelope-o"></i>
-    </a>
-  </li>
-  <li>
-    <a href="https://github.com/{{ site.github_username }}">
-      <i class="fa fa-github">
-      </i>
-    </a>
-  </li>
-  <li>
-    <a href="https://twitter.com/{{ site.twitter_username }}">
-      <i class="fa fa-twitter">
-      </i>
-    </a>
-  </li>
-</ul>
+<div class="sidebar">
+  <a class="site-title" href="{{ site.baseurl }}/">
+    <span class="text">{{ site.title }}</span>
+    <span class="t">T</span>
+  </a>
+  <!-- <ul class="nav">
+    <li>
+      <a href="{{ site.baseurl }}/">Posts</a>
+      <a href="{{ site.baseurl }}/reference.html">Reference</a>
+    </li>
+  </ul> -->
+  {% unless page.layout == 'front' %}
+  <ul class="nav">
+    {% for link in site.navigation %}
+      {% assign current = nil %}
+      {% if page.url == link.url or page.layout == link.layout %}
+        {% assign current = 'active' %}
+      {% endif %}
+      <li class="{% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
+        <a class="{{ current }}" href="{{ link.url }}">{{ link.text }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+  {% endunless %}
+  <ul class="footer-nav">
+    <li>
+      <a href="mailto:{{ site.email }}">
+        <i class="fa fa-envelope-o"></i>
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/{{ site.github_username }}">
+        <i class="fa fa-github">
+        </i>
+      </a>
+    </li>
+    <li>
+      <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank">
+        <i class="fa fa-twitter">
+        </i>
+      </a>
+    </li>
+  </ul>
+</div>

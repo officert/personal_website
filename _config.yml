@@ -7,6 +7,11 @@ url: "http://timofficer.com" # the base hostname & protocol for your site
 twitter_username: timothyOfficer
 github_username:  officert
 permalink: /:year/:month/:day/:title/
+navigation:
+- text: Posts
+  url: /
+- text: Reference
+  url: /reference.html
 
 # Build settings
 markdown: kramdown
