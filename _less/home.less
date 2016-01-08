@@ -1,0 +1,60 @@
+#home {
+  position: relative;
+  height: 100%;
+  .banner {
+    #gradient > .vertical( #e55d87, #d83b65);
+    color: white;
+    .page-panel-text {
+      margin: -120px auto 0;
+      position: absolute;
+      top: 50%;
+      height: 50%;
+      .banner-img {
+        max-width: 180px;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+        border: 10px solid lighten(#e1e0da, 4%);
+        .img {
+          border: 1px solid darken(#e1e0da, 2%);
+        }
+      }
+      .banner-text {
+        margin: 0;
+        position: relative;
+        top: 46px;
+        // @media(min-width: @screen-lg) {
+        //   top: 46px;
+        // }
+        .line {
+          animation-delay: 0.4s;
+          animation-duration: 1s;
+        }
+        .line-1 {
+          font-size: 3.2rem;
+          margin-bottom: 1.4rem;
+          display: block;
+        }
+        .line-2 {
+          display: block;
+        }
+      }
+    }
+  }
+}
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 25%, 0);
+    transform: translate3d(0, 25%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}

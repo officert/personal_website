@@ -1,0 +1,17 @@
+---
+layout: post
+title: 'Makefile'
+date: 2015-09-20T21:26:58.000Z
+category: reference
+author: 'Tim Officer'
+---
+
+####Using PHONY
+
+A phony target is one that is not really the name of a file; rather it is just a name for a recipe to be executed when you make an explicit request. There are two reasons to use a phony target: to avoid a conflict with a file of the same name, and to improve performance.
+
+``` shell
+.PHONY: build
+```
+
+if you have a directory 'build' make will try and execute that directory, so add that target to .PHONY

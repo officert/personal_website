@@ -1,0 +1,32 @@
+---
+layout: post
+title: Security
+date: 2015-01-04T21:26:58.000Z
+category: reference
+author: 'Tim Officer'
+---
+
+####Find & Show Wi-Fi Network Passwords from the Command Line in OS X     
+
+Using this you can find the password for a wireless network you have
+previously connected to.
+
+```
+security find-generic-password -ga "ROUTERNAME" | grep "password:"
+```
+
+For example my home wireless network is called 'workshp'.
+
+```
+security find-generic-password -ga wrkshp | grep "password:"
+```
+
+would give me an output of
+
+```
+password: <wifi password here>
+```
+
+
+
+##Links

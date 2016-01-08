@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<ul class="post-list">
+  {% if site.posts.size < 1 %}
+  <div class="no-post">
+    No Posts
+  </div>
+  {% endif %}
+  {% for post in site.posts %}
+  {% if post.categories contains 'reference' %}
+  <li>
+    <p class="post-meta">
+      {% if post.author %} Posted by {{ post.author }} on {% endif %}{{ post.date | date: "%b %-d, %Y" }}{% if post.meta %} • {{ post.meta }}{% endif %}
+    </p>
+    <h2 class="post-title">
+      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </h2>
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul>
