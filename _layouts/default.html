@@ -3,12 +3,9 @@
 {% include head.html %}
 
 <body>
-  <div class="wrapper">
-    {% include sidebar.html %}
-    <div class="content">
-      {{ content }}
-    </div>
-  </div>
+  {{ content }}
+  {% include footer.html %}
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 
 </html>

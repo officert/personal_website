@@ -1,101 +1,41 @@
-/**
-* Post List
-**/
-.post-list {
-  margin: 0;
-  list-style: none;
-  > li {
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid @gray;
-  }
-  .post-meta {
-    font-size: 14px;
-    color: @gray-light;
-  }
-  .post-title {
-    margin: 4px 0 8px;
-    font-size: 28px;
-    a {
-      color: @text-color;
-    }
-  }
-  .post-link {
-    display: block;
-    font-size: 24px;
+.center {
+  text-align: center;
+}
+
+/* -------------------
+Fonts
+---------------------- */
+.text-shadow-sm {
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+}
+
+/* -------------------
+Page-Panel
+---------------------- */
+.page-panel {
+  position: relative;
+  height: 100%;
+  .page-panel-text {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
   }
 }
-/**
-* Post
-**/
-.post {
-  margin-bottom: 15px;
-  .post-header {
-    margin-bottom: 30px;
-    .post-title {
-      line-height: 1.1;
-      font-weight: normal;
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-    .post-meta {
-      margin-top: 6px;
-      border-bottom: 1px solid @gray;
-      padding-bottom: 15px;
-      color: #767676;
-      font-size: 14px;
-      line-height: 20px;
-    }
-  }
-  .post-content {
-    margin-bottom: 15px;
 
-    // ----------------------------
-    // post globals
-    // ----------------------------
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      position: relative;
-      margin-top: 1em;
-      margin-bottom: 16px;
-      font-weight: bold;
-      line-height: 1.4;
-    }
-    h1 {
-      padding-bottom: 0.3em;
-      font-size: 2.25em;
-      line-height: 1.2;
-      border-bottom: 1px solid #eee;
-    }
-    h2 {
-      padding-bottom: 0.3em;
-      font-size: 1.75em;
-      line-height: 1.225;
-      border-bottom: 1px solid #eee;
-    }
-    h3 {
-      font-size: 1.5em;
-      line-height: 1.43;
-      border-bottom: 1px solid #eee;
-    }
-    h4 {
-      font-size: 1.25em;
-      border-bottom: 1px solid #eee;
-    }
-    h5 {
-      font-size: 1em;
-    }
-    h6 {
-      font-size: 1em;
-      color: #777;
-    }
-    p {
-      margin-top: 0;
-      margin-bottom: 16px;
-    }
+/* -------------------
+Pattern Bg
+---------------------- */
+.pattern-bg {
+  &::after {
+    content: '';
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: url('../images/pattern.png');
+    opacity: 0.5;
+    pointer-events: none;
   }
 }

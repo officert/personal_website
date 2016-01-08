@@ -1,10 +1,10 @@
-var gulp = require('gulp');
-var less = require('gulp-less');
-var sh = require('shelljs');
-var watch = require('gulp-watch');
+'use strict';
 
-var child_process = require('child_process');
-var spawn = require('child_process').spawn;
+const gulp = require('gulp');
+const less = require('gulp-less');
+const watch = require('gulp-watch');
+
+const child_process = require('child_process');
 
 gulp.task('run', [], function(next) {
   return child_process.spawn('bundle', ['exec', 'jekyll', 'serve'], {
@@ -25,7 +25,7 @@ gulp.task('watch', ['css'], function() {
   watch('_less/*.less', {
     emit: 'one',
     emitOnGlob: false
-  }, function(files) {
+  }, function() {
     console.log('css updated...');
     return gulp.src('_less/main.less')
       .pipe(less())
