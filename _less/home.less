@@ -2,16 +2,13 @@
   position: relative;
   height: 100%;
   .banner {
-
-    // background-color: #de4c76;
-    // background-image: -webkit-gradient(linear, left top, left bottom, from(#d83b65), to(#e55d87));
-    // background-image: -webkit-linear-gradient(top, #d83b65, #e55d87);
     #gradient > .vertical( #e55d87, #d83b65);
     color: white;
     .page-panel-text {
       margin: -120px auto 0;
       position: absolute;
       top: 50%;
+      height: 50%;
       .banner-img {
         max-width: 180px;
         border-radius: 50%;
@@ -25,9 +22,10 @@
       .banner-text {
         margin: 0;
         position: relative;
-        @media(min-width: @screen-lg) {
-          top: 46px;
-        }
+        top: 46px;
+        // @media(min-width: @screen-lg) {
+        //   top: 46px;
+        // }
         .line {
           animation-delay: 0.4s;
           animation-duration: 1s;

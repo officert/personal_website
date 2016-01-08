@@ -6791,7 +6791,7 @@ Pattern Bg
 ---------------------- */
 .pattern-bg::after {
   content: '';
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
   top: 0;
@@ -6829,6 +6829,7 @@ Pattern Bg
   margin: -120px auto 0;
   position: absolute;
   top: 50%;
+  height: 50%;
 }
 #home .banner .page-panel-text .banner-img {
   max-width: 180px;
@@ -6843,11 +6844,7 @@ Pattern Bg
 #home .banner .page-panel-text .banner-text {
   margin: 0;
   position: relative;
-}
-@media (min-width: 1200px) {
-  #home .banner .page-panel-text .banner-text {
-    top: 46px;
-  }
+  top: 46px;
 }
 #home .banner .page-panel-text .banner-text .line {
   animation-delay: 0.4s;
