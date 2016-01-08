@@ -10,15 +10,4 @@
   <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ " /feed.xml " | prepend: site.baseurl | prepend: site.url }}" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      var links = document.querySelectorAll('.post-content a');
-      for (var i = 0, length = links.length; i < length; i++) {
-        if (links[i].hostname != window.location.hostname) {
-          links[i].target = '_blank';
-        }
-      }
-    });
-  </script>
 </head>
